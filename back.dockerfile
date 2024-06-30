@@ -16,7 +16,7 @@ COPY configs/back/.eslintrc ./.eslintrc
 
 
 # Install app dependencies
-RUN npm install -g
+RUN NODE_ENV=development npm i
 
 # Copy the rest of the application code
 COPY back .
