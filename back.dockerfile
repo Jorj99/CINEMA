@@ -15,7 +15,7 @@ COPY configs/back/tsconfig.json  /usr/src/configs/back/tsconfig.json
 COPY configs/back/.eslintrc ./.eslintrc
 
 
-# Install app dependencies using the frozen lockfile approach
+# Install app dependencies
 RUN npm install -g
 
 # Copy the rest of the application code
@@ -34,4 +34,4 @@ ENV NODE_ENV=development
 ENV MONGO_URI=mongodb://localhost:27017/cinema_STDEV
 
 # Run the application
-CMD ["npm","run", "dev"]
+CMD ["npm", "start"]
