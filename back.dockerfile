@@ -16,7 +16,7 @@ COPY configs/back/.eslintrc ./.eslintrc
 
 
 # Install app dependencies using the frozen lockfile approach
-RUN npm ci
+RUN npm install -g
 
 # Copy the rest of the application code
 COPY back .
@@ -34,4 +34,4 @@ ENV NODE_ENV=development
 ENV MONGO_URI=mongodb://localhost:27017/cinema_STDEV
 
 # Run the application
-CMD ["npm", "dev"]
+CMD ["npm","run", "dev"]
