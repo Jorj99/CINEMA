@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "start": "dotenv -e .env.development -- ts-node -r tsconfig-paths/register src/index.ts",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
     "dev": "dotenv -e .env.development -- nodemon -r tsconfig-paths/register src/index.ts",
     "build": "tsc",
     "lint": "eslint --fix src test",
