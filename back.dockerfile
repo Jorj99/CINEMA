@@ -15,8 +15,8 @@ COPY configs/back/tsconfig.json  /usr/src/configs/back/tsconfig.json
 COPY configs/back/.eslintrc ./.eslintrc
 
 
-# Install app dependencies
-RUN npm install
+# Install app dependencies using the frozen lockfile approach
+RUN npm ci
 
 # Copy the rest of the application code
 COPY back .
