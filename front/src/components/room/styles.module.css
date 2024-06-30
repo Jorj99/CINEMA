@@ -1,0 +1,118 @@
+.room {
+  background-color: var(--third-bg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid var(--desable-text-color);
+}
+
+.roomReverse {
+  flex-direction: row-reverse;
+}
+
+.room::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(33, 3, 3, 0.1);
+  z-index: 5;
+  transition: 1s ease;
+  width: calc(100% + 80px);
+  border-width: 70vh 0 0 160px;
+  border-bottom: 1px solid var(--pink-active);
+}
+
+.room:hover::before {
+  transform: translateX(-100%);
+  backdrop-filter: blur(0);
+  transition: 1s ease;
+}
+
+.textBlock {
+  width: calc(50% - 80px);
+  height: 100%;
+  background: var(--third-bg);
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 70px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.roomReverse .textBlock {
+  text-align: end;
+}
+
+.textBlock > h1 {
+  font-size: 65px;
+}
+.textBlock > h2 {
+  color: var(--desable-text-color);
+}
+.textBlock p {
+  font-size: 10px;
+}
+
+.textBlock button {
+  background-color: var(--pink-active);
+  box-shadow: none;
+  font-weight: 600;
+  color: var(--text-color);
+  min-height: 50px;
+  font-size: 18px;
+  padding: 12px 20px;
+  min-width: 270px;
+  border: none;
+  border-radius: var(--radius-item);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.textBlock:after {
+  content: "";
+  border-style: solid;
+  border-width: 70vh 0 0 160px;
+  border-color: transparent transparent transparent var(--third-bg);
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 9;
+}
+
+.roomReverse .textBlock:after {
+  content: "";
+  border-style: solid;
+  position: absolute;
+  left: calc(0% - 160px);
+  top: 0;
+  z-index: 9;
+  border-width: 0 0 70vh 160px;
+  border-color: transparent transparent var(--third-bg) transparent;
+  transform: rotate(0deg);
+}
+
+.posterBlock {
+  width: calc(50% + 80px);
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.posterBlock > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

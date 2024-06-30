@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: var(--third-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+  color: var(--text-color);
+}
+
+:root {
+  --third-bg: #191919;
+  --radius-item: 12px;
+  --text-color: #fff;
+  --desable-text-color: rgba(255, 255, 255, 0.45);
+  --pink-active: #dd2146;
+}

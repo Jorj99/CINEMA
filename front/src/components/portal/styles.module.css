@@ -1,0 +1,19 @@
+.portal {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 80vh;
+  width: 80%;
+  padding: 5%;
+  margin: auto;
+  position: fixed;
+  background-color: var(--third-bg);
+  border-radius: var(--radius-item);
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
+  overflow: auto;
+  border: 1px solid var(--text-color);
+}

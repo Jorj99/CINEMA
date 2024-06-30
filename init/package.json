@@ -1,0 +1,14 @@
+{
+  "name": "cinema-init",
+  "version": "1.0.0",
+  "main": "initCinemaData.ts",
+  "scripts": {
+    "start": "npx ts-node initCinemaData.ts"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.10",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.2"
+  }
+}

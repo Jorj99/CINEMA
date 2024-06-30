@@ -1,0 +1,33 @@
+.nav {
+  min-height: 40px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  margin: 3px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 40px;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.edit {
+  background-color: var(--pink-active);
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  border-radius: 50%;
+  border: none;
+  padding: 0px 5px 4px 5px;
+  cursor: pointer;
+}

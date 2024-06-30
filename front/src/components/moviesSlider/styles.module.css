@@ -1,0 +1,36 @@
+.poster {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+.posterBtn {
+  border: none;
+  cursor: pointer;
+  width: 300px;
+  height: 200px;
+  background-color: var(--desable-text-color);
+  border: 1px solid var(--pink-active);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0;
+  margin: 10px;
+}
+
+.notSelected {
+  opacity: 0.5;
+  border: none;
+}
+
+.delateMovie {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--pink-active);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}

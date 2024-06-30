@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: back.dockerfile
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017/cinema_STDEV
+      - PORT=5050
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./back:/usr/src/app
+      - ./back/.env.development:/usr/src/app/.env.development
+    depends_on:
+      - mongo
+  frontend:
+    build:
+      context: ./front
+      dockerfile: ../front.dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./front:/usr/src/app
+      - /usr/src/app/node_modules
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  init:
+    build:
+      context: .
+      dockerfile: init.dockerfile
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017/cinema_STDEV
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
