@@ -29,6 +29,9 @@ EXPOSE 5050
 
 # Set the environment to development
 ENV NODE_ENV=development
+ENV PORT=5050
+ENV NODE_ENV=development
+ENV MONGO_URI=mongodb://localhost:27017/cinema_STDEV
 
 # Run the application
 CMD ["npm", "start"]
