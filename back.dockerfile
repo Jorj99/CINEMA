@@ -27,7 +27,7 @@
 # # Set the environment to development
 # ENV NODE_ENV=development
 # ENV PORT=5050
-# ENV MONGO_URI=mongodb://localhost:27017/cinema_STDEV
+# ENV MONGO_URI=mongodb://mongo:27017/cinema_STDEV
 
 # # Run the application
 # CMD ["npm", "start"]
@@ -54,11 +54,11 @@ RUN npm run build
 # Set the environment
 ENV NODE_ENV=development
 ENV PORT=5050
-ENV MONGO_URI=mongodb://localhost:27017/cinema_STDEV
+ENV MONGO_URI=mongodb://mongo:27017/cinema_STDEV
 
 # Serve the app using a static file server
 RUN npm install -g serve
 CMD ["npm", "run", "start"]
 
 # Expose the port the app runs on
-EXPOSE 3000
+# EXPOSE 5050
