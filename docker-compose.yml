@@ -13,6 +13,8 @@ services:
       - MONGO_URI=mongodb://localhost:27017/cinema_STDEV
     depends_on:
       - mongo
+    links:
+      - mongo
   frontend:
     build:
       context: ./front
