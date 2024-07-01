@@ -3,17 +3,14 @@ version: "3.8"
 services:
   backend:
     build:
-      context: .
-      dockerfile: back.dockerfile
-    environment:
-      - NODE_ENV=development
-      - MONGO_URI=mongodb://mongo:27017/cinema_STDEV
-      - PORT=5050
+      context: ./back
+      dockerfile: ../back.dockerfile
     ports:
       - "5050:5050"
-    volumes:
-      - ./back:/usr/src/app
-      - ./back/.env.development:/usr/src/app/.env.development
+    environment:
+      - NODE_ENV=development
+      - PORT=5050
+      - MONGO_URI=mongodb://localhost:27017/cinema_STDEV
     depends_on:
       - mongo
   frontend:

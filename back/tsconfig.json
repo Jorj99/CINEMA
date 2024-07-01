@@ -1,16 +1,23 @@
 {
-  "extends": "../configs/back/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "skipLibCheck": true,
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["*"]
+    },
   },
   "include": [
-    "src/**/*.ts"
+    "./*.js",
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "src/**/*.ts",
   ],
-  "exclude": [
-    "../frontend/src"
-  ]
 }
